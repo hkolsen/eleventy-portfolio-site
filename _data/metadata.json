@@ -1,0 +1,21 @@
+{
+  "title": "Heidi Olsen - Frontend Engineer",
+  "url": "https://heidiolsen.com/",
+  "language": "en",
+  "description": "I am sharing my experience as a frontend software engineer.",
+  "feed": {
+    "subtitle": "I am sharing my experience as a frontend software engineer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://heidiolsen.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://heidiolsen.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Heidi Olsen",
+    "email": "hello@heidiolsen.com",
+    "url": "https://heidiolsen.com/about-me/"
+  }
+}
