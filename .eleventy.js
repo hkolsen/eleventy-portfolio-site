@@ -5,12 +5,15 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const eleventyGoogleFonts = require("eleventy-google-fonts");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(eleventyGoogleFonts);
 
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
@@ -63,6 +66,28 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+
+  async function imageShortcode(src, alt, sizes) {
+    let metadata = await Image(src, {
+      widths: [300, 600, 1200, 2000, null],
+      formats: ["avif", "jpeg", "svg"]
+    });
+  
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    };
+  
+    return Image.generateHTML(metadata, imageAttributes, {
+      whitespaceMode: "inline"
+    });
+  }
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

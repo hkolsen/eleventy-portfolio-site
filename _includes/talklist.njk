@@ -1,0 +1,17 @@
+<ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+{% for talk in talks %}
+  <li class="flex-col bg-white">
+  <div class="flex-row"><span>{{ talk.category }}</span> <span>{{ talk.location }}</span></div>
+  {% if talk.hero %}<img src={{talk.hero}} alt="Screenshot of slideshow" />{% endif %}
+  <div class="flex-col flex-1">
+  <p>{{ talk.date }}</p>
+  <h3>{{ talk.confName }}</h3>
+  <p>{{ talk.title }}</p>
+  </div>
+  <div class="flex-row">
+  {% if talk.slides %}<a class="py-1 px-2 rounded-sm text-white bg-darkpurple ring-4 ring-darkpurple ring-opacity-50" href={{ talks.slides }} href="_blank">View Slides</a>{% endif %}
+  {% if talk.video %}<a class="py-1 px-2 rounded-sm text-white	bg-darkpurple ring-4 ring-darkpurple ring-opacity-50" href={{ talks.video }} href="_blank">Watch Video</a>{% endif %}
+  </div>
+  </li>
+{% endfor %}
+</ul>

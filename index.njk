@@ -4,11 +4,34 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
-
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
-
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<section class="md:container md:mx-auto flex flex-col sm:flex-row justify-between">
+<article class="w-2/5">
+<h1 class="text-xl">Hello friend,</h1>
+<p class="text-lg">I am a Pacific Northwest solutions-oriented engineer who is passionate about structuring, iterating, and nurturing systems of community & code.</p>
+</article>
+<aside class="w-2/5">
+{% image "./assets/heidi-avatar.svg", "Illustration of Heidi looking like Daria. La la la la la", "(min-width: 30em) 50vw, 100vw" %}
+</aside>
+</section>
+{% image "./assets/mountain.svg", "Illustration of mountains in the Pacific Northwest", "(min-width: 100vw) 50vw, 100vw" %}
+<div class="bg-purple">
+<section class="md:container md:mx-auto flex flex-col sm:flex-row justify-between">
+<article class="w-2/4">
+<h2 class="text-xl">A little about my journey</h2>
+<p>I am currently a Lead Software Engineer at Bumped, helping build a consumer app that removes barriers to the stock market. Previously I was a Lead Software Engineer at eROI (now Thesis). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.</p>
+</article>
+<article class="w-2/4	shadow-box">
+<h2 class="text-xl">Currently exploring:</h2>
+<ul>
+<li>Different approaches to design systems</li>
+<li>Opportunities to contribute to open source and help establish a safe and inclusive tech community</li>
+</ul>
+</article>
+</section>
+<section class="md:container md:mx-auto flex flex-col sm:flex-row justify-between">
+<div class="speaker-box">
+  <h1>Speaking + Sharing</h1>
+  <div class="tail"></div>
+</div>
+</section>
+</div>
