@@ -65,6 +65,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("scripts");
+  
 
   async function imageShortcode(src, alt, sizes) {
     let metadata = await Image(src, {

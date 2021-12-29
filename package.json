@@ -8,7 +8,7 @@
     "serve": "npm-run-all clean --parallel serve:*",
     "serve:webpack": "webpack --mode development --watch",
     "serve:eleventy": "ELEVENTY_ENV=development eleventy --serve",
-    "build": "run-s clean build:*",
+    "build": "rm -rf _site && eleventy && tailwindcss css/main.css -o _site/assets/main.css",
     "build:webpack": "webpack --mode production",
     "build:eleventy": "ELEVENTY_ENV=production eleventy",
     "clean": "rimraf _site",
@@ -38,6 +38,7 @@
     "markdown-it-anchor": "^8.1.2",
     "mini-css-extract-plugin": "^2.4.2",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
     "postcss-loader": "^6.2.0",
     "rimraf": "^3.0.2",
     "tailwindcss": "^2.2.17",
@@ -45,6 +46,6 @@
     "webpack-cli": "^4.9.0"
   },
   "dependencies": {
-    "eleventy-plugin-youtube-embed": "^1.6.5"
+    "postcss-import": "^14.0.2"
   }
 }
