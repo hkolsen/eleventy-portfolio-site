@@ -2,54 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-#menu-toggle:checked + #menu {
-  display: block;
+body {
+  background: #45c2d8;
+  margin: 0;
+  font-family: sans-serif;
+}
+.parallax-container {
+  position: fixed;
+  overflow: visible;
+  width: 100%;
+  height: 1000px;
+  z-index: 0;
 }
 
-.tmpl-home {
-  background: rgb(252,184,167);
-  background: linear-gradient(0deg, rgba(252,184,167,1) 0%, rgba(225,204,162,1) 36%, rgba(102,167,222,1) 100%);
-  color:#211e36;
+.parallax-layer {
+  width: 100%;
+  height: 1100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .layer-0 {
+    top: 0;
+    z-index: 5;
+     background: #45c2d8 ;
+  }
+
+  .layer-2 {
+    top: -50px;
+    z-index: 10;
+    background-image: url('../assets/water_1.png');
+  }
+  .layer-3 {
+    top: -10px;
+    z-index: 15;
+    background-image: url('../assets/water_2.png');
+  }
+  .layer-4 {
+    top: 65px;
+    z-index: 20;
+    background-image: url('../assets/water_3.png');
+  }
+  .layer-5 {
+    top: 150px;
+    z-index: 25;
+    background-image: url('../assets/water_4.png');
+    
+  }
+
+.content {
+  z-index: 100;
 }
 
-.shadow-box {
-  background: #fff;
-  border: 2px solid #211e36;
-  box-shadow: #211e36 -8px 8px;
-  margin: 0 0 0 2em;
-  padding: 1em 2em;
-}
-
-.speaker-box {
-  background: #fff;
-  border: 2px solid #2a2c35;
-  box-shadow: #2a2c35 -8px 8px;
-  padding: 1em 1em 2em;
-  position: relative;
-}
-
-.speaker-box .tail {
-  border-left: 22px solid transparent;
-  border-top: 20px solid #fff;
-  bottom: -25px;
-  position: absolute;
-  right: 50%;
-}
-
-.speaker-box .tail::before {
-  border-left: 24px solid transparent;
-  border-top: 22px solid #2a2c35;
-  bottom: -2px;
-  content: "";
-  position: absolute;
-  right: -2px;
-}
-
-.speaker-box .tail::after {
-  border-left: 21px solid transparent;
-  border-top: 24px solid #fff;
-  bottom: 6px;
-  content: "";
-  position: absolute;
-  right: 0;
+.rotate {
+  transform: rotate(5deg);
 }

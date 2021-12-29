@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-portfolio-site",
+  "name": "feast-of-alvis",
   "version": "1.0.0",
-  "description": "A repository for a portfolio web site using the Eleventy static site generator.",
+  "description": "A repository for a web site dedicated to Feast of Alvis using the Eleventy static site generator.",
   "scripts": {
     "watch": "eleventy --watch",
     "start": "eleventy --serve",
@@ -16,20 +16,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hkolsen/eleventy-portfolio-site.git"
+    "url": "git://github.com/hkolsen/feast-of-alvis.git"
   },
   "author": {
-    "name": "Heidi Olsen",
-    "url": "https://heidiolsen.com/"
+    "name": "Heidi Olsen"
   },
   "bugs": {
-    "url": "https://github.com/hkolsen/eleventy-portfolio-site/issues"
+    "url": "https://github.com/hkolsen/feast-of-alvis/issues"
   },
-  "homepage": "https://github.com/hkolsen/eleventy-portfolio-site#readme",
+  "homepage": "https://github.com/hkolsen/feast-of-alvis#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^0.10.0",
-    "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "autoprefixer": "^10.3.7",
@@ -45,5 +43,8 @@
     "tailwindcss": "^2.2.17",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0"
+  },
+  "dependencies": {
+    "eleventy-plugin-youtube-embed": "^1.6.5"
   }
 }

@@ -2,7 +2,6 @@ const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const eleventyGoogleFonts = require("eleventy-google-fonts");
@@ -12,7 +11,6 @@ module.exports = function(eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventyGoogleFonts);
 
   // https://www.11ty.dev/docs/data-deep-merge/
@@ -66,6 +64,7 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("scripts");
 
   async function imageShortcode(src, alt, sizes) {
     let metadata = await Image(src, {

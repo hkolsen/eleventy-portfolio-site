@@ -1,37 +1,26 @@
 ---
 layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
 ---
-<section class="md:container md:mx-auto flex flex-col sm:flex-row justify-between">
-<article class="w-2/5">
-<h1 class="text-xl">Hello friend,</h1>
-<p class="text-lg">I am a Pacific Northwest solutions-oriented engineer who is passionate about structuring, iterating, and nurturing systems of community & code.</p>
+<section class=" mt-10 md:container md:mx-auto flex flex-col sm:flex-row justify-between">
+<article class="border-2 border-black rounded p-10 z-[100] w-11/12 lg:w-1/2 mr-auto ml-auto bg-white">
+<h2 class="text-4xl md:text-5xl text-yellow-900 font-serif">It's an extravaganza!</h2>
+<p class="text-lg mt-5 font-sans">You are cordinally invited to a virtual showing of the Feast of Alvis, on thee this Alvisday, the 29th of December 2021.<br /><br />
+Come All Ye Faithful! Drink Nog and Be Merry!</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="col-span-1">
+{% image "./assets/WTV_Yellow-Print.png", "Tune in on WTV", "(min-width: 10em) 50vw, 100vw" %}
+</div>
+<div class="col-span-2 flex flex-col">
+  <h3 class="text-2xl text-yellow-900 font-serif md:mt-10 md:mb-10">Streaming at 7pm PST on WTV</h3>
+  <div class="mt-3 sm:mt-0 sm:ml-3">
+  <a href="https://www.twitch.tv/checkoutthew" class="font-sans w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-md text-yellow-900 bg-yellow-100 hover:bg-yellow-200 md:py-4 md:text-lg md:px-10">
+  Tune in on Twitch
+  </a>
+  </div>
+  </div>
+</div>
 </article>
-<aside class="w-2/5">
-{% image "./assets/heidi-avatar.svg", "Illustration of Heidi looking like Daria. La la la la la", "(min-width: 30em) 50vw, 100vw" %}
+<aside class="w-9/12 md:w-9/12 lg:w-2/5 rotate mr-auto ml-auto mt-10">
+{% image "./assets/holyalvis.png", "Feast of Alvis", "(min-width: 30em) 50vw, 100vw" %}
 </aside>
 </section>
-{% image "./assets/mountain.svg", "Illustration of mountains in the Pacific Northwest", "(min-width: 100vw) 50vw, 100vw" %}
-<div class="bg-purple">
-<section class="md:container md:mx-auto flex flex-col sm:flex-row justify-between">
-<article class="w-2/4">
-<h2 class="text-xl">A little about my journey</h2>
-<p>I am currently a Lead Software Engineer at Bumped, helping build a consumer app that removes barriers to the stock market. Previously I was a Lead Software Engineer at eROI (now Thesis). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.</p>
-</article>
-<article class="w-2/4	shadow-box">
-<h2 class="text-xl">Currently exploring:</h2>
-<ul>
-<li>Different approaches to design systems</li>
-<li>Opportunities to contribute to open source and help establish a safe and inclusive tech community</li>
-</ul>
-</article>
-</section>
-<section class="md:container md:mx-auto flex flex-col sm:flex-row justify-between">
-<div class="speaker-box">
-  <h1>Speaking + Sharing</h1>
-  <div class="tail"></div>
-</div>
-</section>
-</div>

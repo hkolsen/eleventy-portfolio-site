@@ -1,21 +1,6 @@
 {
-  "title": "Heidi Olsen - Frontend Engineer",
-  "url": "https://heidiolsen.com/",
+  "title": "Feast of Alvis",
+  "url": "https://feastofalvis.com/",
   "language": "en",
-  "description": "I am sharing my experience as a frontend software engineer.",
-  "feed": {
-    "subtitle": "I am sharing my experience as a frontend software engineer.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://heidiolsen.com/"
-  },
-  "jsonfeed": {
-    "path": "/feed/feed.json",
-    "url": "https://heidiolsen.com/feed/feed.json"
-  },
-  "author": {
-    "name": "Heidi Olsen",
-    "email": "hello@heidiolsen.com",
-    "url": "https://heidiolsen.com/about-me/"
-  }
+  "description": "It's almost Alvistide, a holiday celebrating the birth of Alvis, a Jesus expy known for his love of alcohol and revenge."
 }

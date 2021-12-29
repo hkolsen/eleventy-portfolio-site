@@ -6,31 +6,26 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="stylesheet" type="text/css" href="/assets/main.css" />
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap' %}
+    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Rye&family=Lato&display=swap' %}
   </head>
-  <body class="bg-babyblue font-sans">
-      <header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
-
-      <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
-      <input class="hidden" type="checkbox" id="menu-toggle" />
-
-      <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
-        <nav>
-          <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
-            {%- for entry in collections.all | eleventyNavigation %}
-            <li class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-        </nav>
-      </div>
-
+  <body class="relative">
+   <div class="parallax-container">
+    <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"></div>
+    <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="565"></div>
+    <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="565"></div>
+    <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="565"></div>
+    <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="565"></div>
+    <div class="parallax-layer layer-5" data-parallax-speed="0.9" data-max-scroll="565"></div>
+  </div>
+<div class="content">
+  <header class="relative flex justify-center">
+  {% image "./assets/banner.png", "Happy Feast of Alvis!", "(min-width: 60em) 50vw, 100vw" %}
   </header>
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
-    <footer></footer>
+    </div>
+    </div>
     <script src="/assets/main.js"></script>
   </body>
 </html>
